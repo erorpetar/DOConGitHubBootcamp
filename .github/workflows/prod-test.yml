@@ -1,4 +1,8 @@
-Test:
+name: CI Build for Docker Action 
+  workflow_dispatch:
+        
+jobs:
+  Test:
     runs-on: ubuntu-latest
     if: github.event_name == 'workflow_dispatch' 
     needs: Build
